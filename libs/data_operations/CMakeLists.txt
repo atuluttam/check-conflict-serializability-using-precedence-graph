@@ -1,0 +1,8 @@
+cmake_minimum_required(VERSION 3.10)
+project(DataOps)
+# find_package(OpenCV )
+include_directories( ${OpenCV_INCLUDE_DIRS} )
+set(PRJ_LINK_LIBRARY ${OpenCV_LIBS})
+add_library(DataOps src/data_operations.cpp)
+target_include_directories(DataOps PUBLIC include)
+target_link_libraries(DataOps ${PRJ_LINK_LIBRARY})
